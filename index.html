@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <p class="nome" name="hum" id="demo2">Texto Cinza</p>
+    <button onclick="mudarCor()">Mudar Cor</button>
+    <button onmousemove="mudarTexto()">Passe o mouse</button>
+    <button onkeypress="mudarFonte()">Clique em um botão</button>
+    <button onkeydown="mudarCorFundo()" onkeyup="restaurarCorFundo()">Pressione e solte uma tecla</button>
+    <button onclick="adicionarTexto()">Adicionar Texto</button>
+    
+  
+    <script>
+        function mudarCor() {
+            const mudarcor = document.getElementsByClassName('nome')[0];
+            mudarcor.style.color = 'pink';
+        }
+
+        function mudarTexto() {
+            const mudartexto = document.getElementsByName('hum')[0];
+            mudartexto.innerText = 'cor';
+        }
+
+        function mudarFonte() {
+            const mudarfonte = document.getElementById('demo2');
+            mudarfonte.style.fontFamily = 'Arial, sans-serif';
+        }
+
+        function mudarCorFundo() {
+            document.body.style.backgroundColor = 'black';
+        }
+
+        function restaurarCorFundo() {
+            document.body.style.backgroundColor = '';
+        }
+
+        function adicionarTexto() {
+            const elementos = document.querySelectorAll('.nome');
+            elementos.forEach((elemento) => {
+                const novoTexto = document.createElement('p');
+                novoTexto.innerText = 'Texto';
+                elemento.appendChild(novoTexto);
+            });
+        }
+
+    </script>
+</body>
+</html>

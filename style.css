@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    height: 100vh;
+    margin: 0; 
+}
+.nome {
+    font-size: 2rem;
+}
+button {
+    padding: 7px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: gray;
+    margin-right: 10px; 
+}
+button.blue {
+    background-color: #3498db;
+}
